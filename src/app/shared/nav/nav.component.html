@@ -1,0 +1,43 @@
+<nav class="navbar bg-light fixed-top navbar-cor">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: black;" href="#">Collect Toxic Waste</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end navbar-cor_1" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Collect Toxic Waste</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+              <a class="nav-link active fonte_navbar" [ngClass]="{active: login_active}" aria-current="page" [routerLink]="['/']">Realizar Login</a>
+          </li>
+          <li class="nav-item" *ngIf="usuario_logado">
+              <a class="nav-link active fonte_navbar" [ngClass]="{active: pontos_coleta_active}" aria-current="page" [routerLink]="['/principal']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fonte_navbar" [ngClass]="{active: cadastro_points_active}" [routerLink]="['/cadastrar-ponto-coleta']">Cadastrar Ponto de Coleta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fonte_navbar" [ngClass]="{active: cadastro_user_active}" [routerLink]="['/realizar-cadastro']">Cadastrar Novo Usuário</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fonte_navbar" [ngClass]="{active: artigos_active}" [routerLink]="['/artigos']">Ler Artigos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-5">
+          <li>
+            <button [routerLink]="['/']" style="background: none; border: none;">
+              Sair
+              <img src="../../../assets/Icones/logout.png" alt="icone para sair" style="max-width: 25px;">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

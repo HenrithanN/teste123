@@ -1,0 +1,23 @@
+<app-nav [artigos_active]="true"></app-nav>
+<div style="width: 100%; height:55px; background: #198754;">
+</div>
+<div class="artigos">
+    <p style="color: #198754; font-size: 2rem; margin-left: 2rem; text-align: center;">
+
+        Artigos
+    </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let artigo of lista_artigos" class="col-md-3" style="margin-top: 2rem; margin-right: 5rem;">
+            <div class="card" style="width: 20rem;">
+                <img [src]="artigo.image" class="card-img-top" style="max-height: 200px;" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ artigo.title }}</h5>
+                  <p class="card-text">{{ artigo.descricao }}</p>
+                  <a href="#" class="btn btn-success">Saiba mais!</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
